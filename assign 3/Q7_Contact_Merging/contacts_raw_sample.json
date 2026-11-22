@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Dr. Ravi",
+    "phones": [
+      "+91 98400 12345"
+    ],
+    "emails": [
+      "ravi.doc@gmail.com"
+    ],
+    "source": "Phone 1"
+  },
+  {
+    "name": "ravi kumar",
+    "phones": [
+      "9840012345",
+      "98400 99999"
+    ],
+    "emails": [],
+    "source": "SIM Card"
+  },
+  {
+    "name": "Ravi Kumar MD",
+    "phones": [
+      "098400-99999"
+    ],
+    "emails": [
+      "dr.ravi@apollo.org"
+    ],
+    "source": "Phone 2"
+  },
+  {
+    "name": "Ravi Kumar",
+    "phones": [
+      "+91 91234 56789"
+    ],
+    "emails": [
+      "ravi.engg@tcs.com"
+    ],
+    "source": "Phone 1"
+  },
+  {
+    "name": "priya s",
+    "phones": [
+      "9444011223"
+    ],
+    "emails": [],
+    "source": "SIM Card"
+  },
+  {
+    "name": "Priya Sundaram",
+    "phones": [
+      "094440-11223"
+    ],
+    "emails": [
+      "priya.s@gmail.com"
+    ],
+    "source": "Phone 2"
+  }
+]

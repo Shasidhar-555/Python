@@ -1,0 +1,28 @@
+# Kisan Call Centre - Sample Complaint Log
+ID         | District       | Crop         | Complaint Text
+--------------------------------------------------------------------------------
+KCC-000001 | Trichy         | Paddy        | seeds not received on time for sowing
+KCC-000002 | Trichy         | Sugarcane    | pest attack spotted on leaf stems needing subsidy spray
+KCC-000003 | Madurai        | Cotton       | fertiliser price high in cooperative society
+KCC-000004 | Trichy         | Banana       | fertiliser price high in cooperative society
+KCC-000005 | Tirunelveli    | Groundnut    | seeds not received on time for sowing
+KCC-000006 | Thanjavur      | Paddy        | pest attack spotted on leaf stems needing subsidy spray
+KCC-000007 | Madurai        | Maize        | seeds not received on time for sowing
+KCC-000008 | Tirunelveli    | Cotton       | mandir market rate lower than minimum support price
+KCC-000009 | Madurai        | Groundnut    | power supply irregular disrupting drip irrigation
+KCC-000010 | Thanjavur      | Cotton       | mandir market rate lower than minimum support price
+KCC-000011 | Coimbatore     | Sugarcane    | borewell water depleted due to delayed monsoon
+KCC-000012 | Madurai        | Sugarcane    | fertiliser price high in cooperative society
+KCC-000013 | Thanjavur      | Groundnut    | fertiliser price high in cooperative society
+KCC-000014 | Coimbatore     | Sugarcane    | power supply irregular disrupting drip irrigation
+KCC-000015 | Thanjavur      | Banana       | tractor diesel subsidy not credited to bank account
+KCC-000016 | Tirunelveli    | Paddy        | mandir market rate lower than minimum support price
+KCC-000017 | Thanjavur      | Maize        | power supply irregular disrupting drip irrigation
+KCC-000018 | Trichy         | Maize        | crop insurance claim pending verification inspection
+KCC-000019 | Tirunelveli    | Cotton       | fertiliser price high in cooperative society
+KCC-000020 | Thanjavur      | Banana       | pest attack spotted on leaf stems needing subsidy spray
+KCC-000021 | Coimbatore     | Paddy        | pest attack spotted on leaf stems needing subsidy spray
+KCC-000022 | Thanjavur      | Groundnut    | power supply irregular disrupting drip irrigation
+KCC-000023 | Salem          | Banana       | crop insurance claim pending verification inspection
+KCC-000024 | Madurai        | Sugarcane    | crop insurance claim pending verification inspection
+KCC-000025 | Madurai        | Banana       | power supply irregular disrupting drip irrigation

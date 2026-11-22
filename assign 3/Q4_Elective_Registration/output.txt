@@ -1,0 +1,120 @@
+========================================================================================
+PART 1: 'COMPLETE THE CODE' - ELECTIVE REGISTRATION CLASH DETECTION
+========================================================================================
+clash      : ['192311004', '192311009']
+exactly one: ['192311001', '192311002', '192311007', '192311010']
+neither    : ['192311003', '192311005', '192311006', '192311008']
+
+[✓] Complete the Code passed all assertions matching expected assignment output.
+
+--- REWRITE USING SET METHODS (METHOD EQUIVALENCE CHECK) ---
+Methods clash      : ['192311004', '192311009']
+Methods exactly one: ['192311001', '192311002', '192311007', '192311010']
+Methods neither    : ['192311003', '192311005', '192311006', '192311008']
+[✓] Verified: Operator syntax (&, ^, -, |) is mathematically and practically
+    equivalent to method calls (.intersection, .symmetric_difference, .difference, .union).
+
+========================================================================================
+PART 2: VENN DIAGRAM VISUALIZATION OF ELECTIVE REGISTRATION ALGEBRA
+========================================================================================
+
+    ┌────────────────────────────────── UNIVERSAL SET (All Students: 1..10) ──────────────────────────────────┐
+    │                                                                                                         │
+    │        ┌─────────────────────────┐                     ┌─────────────────────────┐                      │
+    │        │       AI ELECTIVE       │                     │      IoT ELECTIVE       │                      │
+    │        │                         │  INTERSECTION (&)   │                         │                      │
+    │        │  Only AI (AI - IoT):    │     CLASH ZONE      │  Only IoT (IoT - AI):   │                      │
+    │        │  192311001              │     192311004       │  192311002              │                      │
+    │        │  192311007              │     192311009       │  192311010              │                      │
+    │        │                         │                     │                         │                      │
+    │        └─────────────────────────┴─────────────────────┴─────────────────────────┘                      │
+    │                                                                                                         │
+    │        ◄─────────────────────── SYMMETRIC DIFFERENCE (AI ^ IoT) ───────────────────────►               │
+    │        Exactly One Course = {192311001, 192311002, 192311007, 192311010}                                 │
+    │                                                                                                         │
+    │   UNREGISTERED / NEITHER: All - (AI ∪ IoT)                                                              │
+    │   {192311003, 192311005, 192311006, 192311008}                                                         │
+    └─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+    
+
+========================================================================================
+PART 3: SET DEDUPLICATION & MUTABILITY CONSTRAINTS
+========================================================================================
+Raw registrations list (6 entries): ['192311001', '192311002', '192311001', '192311003', '192311002', '192311001']
+Deduplicated set       (3 entries): ['192311001', '192311002', '192311003']
+EXPLANATION: Sets are implemented as hash tables without values. When an element is added,
+its hash determines the bucket. If an identical element already occupies the bucket,
+the duplicate insertion is ignored in O(1) time.
+
+Testing element types inside a set:
+• Successfully added tuple ('192311001', 'AI_Slot_1') to set: {('192311001', 'AI_Slot_1')}
+• Attempting to add list ['192311001', 'AI_Slot_1'] to set: TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+EXPLANATION: Sets require every element to be hashable and immutable so that its bucket
+location remains permanent. Lists are mutable and unhashable, whereas tuples are immutable.
+
+========================================================================================
+PART 4: BENCHMARK 1 - MEMBERSHIP TESTING (x in list vs x in set)
+========================================================================================
+Dataset Size (N)   | x in list (s)    | x in set (s)     | Speedup Ratio 
+------------------------------------------------------------------------
+10,000             | 0.00006294       | 0.00000002       | 2894.8       x
+100,000            | 0.00073291       | 0.00000002       | 41640.4      x
+1,000,000          | 0.00856412       | 0.00000002       | 425884.9     x
+------------------------------------------------------------------------
+
+========================================================================================
+PART 5: BENCHMARK 2 - FINDING COMMON STUDENTS (NESTED LOOPS vs SET &)
+========================================================================================
+Group Sizes (n, m)     | Nested Loops O(n*m)    | Set & O(min(n,m))    | Speedup     
+----------------------------------------------------------------------------------
+(500, 500)           | 0.001281               | 0.000016             | 79.1       x
+(2,000, 2,000)           | 0.019998               | 0.000066             | 302.1      x
+(5,000, 5,000)           | 0.129192               | 0.000335             | 386.0      x
+----------------------------------------------------------------------------------
+
+========================================================================================
+PART 6: EDGE CASE TESTING (EMPTY ELECTIVES & IDENTICAL ELECTIVES)
+========================================================================================
+Case A: Both electives empty:
+  Clashes      : set()
+  Exactly one  : set()
+  Neither      : {'S1', 'S4', 'S2', 'S3'}
+
+Case B: Identical electives (All students registered in both):
+  Clashes      : {'S1', 'S2'}
+  Exactly one  : set()
+  Neither      : {'S4', 'S3'}
+
+  [✓] All edge cases verified against manual set algebra calculations.
+
+========================================================================================
+PART 7: COMPLEXITY ANALYSIS & DESIGN DEFENSE
+========================================================================================
+
+1. WHEN TO CONVERT A LIST INTO A SET & WHAT INFORMATION IS LOST:
+   - When to Convert:
+     * When performing multiple membership tests (`if x in collection`).
+     * When performing relational algebra (union, intersection, difference, deduplication).
+     * When order and frequency do not carry business significance.
+   - What is Lost:
+     * Sequence Ordering: Sets do not preserve insertion order or position.
+     * Element Duplication: Frequencies and duplicate counts are discarded.
+     * Indexing & Slicing: Expressions like `s[0]` or `s[1:5]` raise TypeError.
+
+2. ALTERNATIVE CONCEPT AND COMPLEXITY ANALYSIS:
+   ┌───────────────────────────────────┬──────────────────────┬──────────────────────┐
+   │ Approach                          │ Time Complexity      │ Space Complexity     │
+   ├───────────────────────────────────┼──────────────────────┼──────────────────────┤
+   │ 1. Nested Loops over Lists        │ O(n * m)             │ O(1) auxiliary       │
+   │ 2. Sort both Lists + 2-Pointer    │ O(n log n + m log m) │ O(1) auxiliary       │
+   │ 3. Hash Sets (Python set &)       │ O(n + m) build/query │ O(n + m) auxiliary   │
+   └───────────────────────────────────┴──────────────────────┴──────────────────────┘
+   
+   - Analysis:
+     * For n = m = 100,000:
+       - Nested loops require 10,000,000,000 operations (~hours of CPU runtime).
+       - Sort + Walk requires ~3,400,000 comparisons (~0.12 seconds).
+       - Hash Set intersection requires ~200,000 hash operations (~0.015 seconds).
+     * Therefore, Hash Sets provide the optimal real-world performance for batch registration.
+
+========================================================================================

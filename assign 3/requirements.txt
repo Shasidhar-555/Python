@@ -1,0 +1,7 @@
+# Course: CSA08 / CSA0807 Python Programming - Assignment 3 (CO3)
+# Python Data Structures: Lists, Tuples, Dictionaries, Sets, Slicing, Mutability, Copying, List Comprehension
+# Standard library is primarily utilized (time, sys, collections, copy, random, re, io).
+# Visualization, document generation, and terminal screenshot utilities:
+matplotlib>=3.8.0
+pillow>=10.0.0
+python-docx>=1.1.0

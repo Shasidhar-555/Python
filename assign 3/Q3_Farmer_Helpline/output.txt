@@ -1,0 +1,114 @@
+========================================================================================
+PART 1: 'COMPLETE THE CODE' - KISAN CALL CENTRE WORD FREQUENCIES
+========================================================================================
+Result: [('seeds', 3), ('price', 2), ('received', 2)]
+Expected: [('seeds', 3), ('price', 2), ('received', 2)]
+
+[✓] Complete the Code passed all assertions matching expected assignment output.
+
+EXPLANATION - TIE-BREAKING MECHANISM:
+Why 'price' comes before 'received' although both occur twice:
+• The sorting key is `lambda item: (-item[1], item[0])`.
+• For each (word, count) tuple:
+    - Primary key: -count (descending frequency order). Since both have count 2,
+      primary key for both is -2.
+    - Secondary key: item[0] (the word string itself). Python breaks the tie using
+      standard lexicographical comparison: 'price' < 'received'.
+• Consequently, ('price', 2) strictly precedes ('received', 2).
+
+========================================================================================
+PART 2: EDGE CASE VALIDATION (EMPTY TEXT, CASING, PUNCTUATION)
+========================================================================================
+Edge text inputs:
+  • ''
+  • '   '
+  • 'SEEDS, seeds! Seeds? Delayed...'
+  • 'Drought! No water; borewell failed: crop damaged.'
+
+Extracted Token Frequencies: {'seeds': 3, 'delayed': 1, 'drought': 1, 'water': 1, 'borewell': 1, 'failed': 1, 'crop': 1, 'damaged': 1}
+  [✓] Successfully normalized casing ('SEEDS', 'seeds!', 'Seeds?') into single key 'seeds' with count 3.
+  [✓] Empty and whitespace-only records handled with 0 tokens and no exceptions.
+
+========================================================================================
+PART 3: EMPIRICAL BENCHMARK - DICT.GET() vs COUNTER vs LIST.COUNT()
+========================================================================================
+Complaints   | Total Words  | Distinct   | dict.get() (s)   | Counter (s)    | list.count() (s)  
+--------------------------------------------------------------------------------------------
+1,000        | 5,886        | 45         | 0.000276         | 0.000177       | 0.001643          
+10,000       | 58,658       | 45         | 0.003043         | 0.001933       | 0.020183          
+100,000      | 587,590      | 45         | 0.030755         | 0.018766       | 0.183948          
+--------------------------------------------------------------------------------------------
+
+========================================================================================
+PART 4: DISTRICT & CROP COMPLAINT GROUPING DEMONSTRATION
+========================================================================================
+Complaints per District:
+• Coimbatore    : 2 complaints (e.g., 'borewell water depleted due to delayed monsoon')
+• Madurai       : 4 complaints (e.g., 'fertiliser price high in cooperative society')
+• Thanjavur     : 4 complaints (e.g., 'pest attack spotted on leaf stems needing subsidy spray')
+• Tirunelveli   : 2 complaints (e.g., 'seeds not received on time for sowing')
+• Trichy        : 3 complaints (e.g., 'seeds not received on time for sowing')
+
+Complaints per Crop:
+• Banana        : 2 complaints (e.g., 'fertiliser price high in cooperative society')
+• Cotton        : 3 complaints (e.g., 'fertiliser price high in cooperative society')
+• Groundnut     : 3 complaints (e.g., 'seeds not received on time for sowing')
+• Maize         : 1 complaints (e.g., 'seeds not received on time for sowing')
+• Paddy         : 2 complaints (e.g., 'seeds not received on time for sowing')
+• Sugarcane     : 4 complaints (e.g., 'pest attack spotted on leaf stems needing subsidy spray')
+
+========================================================================================
+PART 5: DESIGN & ANALYSIS - HASH TABLE MECHANICS & ENGINEERING DECISION
+========================================================================================
+
+1. HOW A DICTIONARY FINDS A KEY & WHY LOOKUP IS O(1) AVERAGE:
+   - Python dictionaries use an open-address hash table with perturbation probing.
+   - Lookup Process:
+     1. Key Hash: Computes hash_val = hash(key).
+     2. Slot Index: Direct bitwise modulo maps hash_val to an index in the sparse indices table.
+     3. Entry Check: If slot is empty, key is not in dict (KeyError or default return).
+        If slot contains an entry, CPython first checks if stored hash matches; if yes, it
+        checks key identity (curr is key) or equality (curr == key).
+     4. Collision Resolution: If hash matches but equality fails (hash collision), CPython
+        uses pseudo-random perturbation recurrence:
+        index = (5 * index + 1 + perturb) & mask
+     5. Resizing: When the table exceeds 2/3 capacity (load factor > 0.66), the table size
+        is doubled to guarantee minimal collisions.
+   - Why Independent of Size: Each lookup requires evaluating a fixed hash and probing an
+     average of ~1.2 slots regardless of whether the dictionary holds 10 or 10,000,000 items.
+
+2. DICTIONARY COUNTING VS LIST.COUNT():
+   - Dictionary Counting: O(n) total time. Scans the word sequence once. For each word,
+     dict.get() performs an O(1) hash table lookup and update. Total time: O(n).
+   - list.count() Method: O(n * d) total time. For each of the d distinct words, list.count()
+     performs an O(n) full linear scan of the entire list.
+     When n = 100,000 and d = 5,000, list.count() executes 5,000 * 100,000 = 500,000,000
+     pointer comparisons! This collapses throughput from milliseconds to minutes.
+
+3. DICTIONARY KEY ORDER IN PYTHON 3.7+:
+   - Since Python 3.7 (CPython 3.6 implementation by Raymond Hettinger), dictionaries
+     guarantee insertion-order iteration as a language specification.
+   - Architecture:
+     * Dense entries array: A contiguous list of (hash, key_pointer, value_pointer) structs
+       appended in exact order of insertion.
+     * Sparse indices table: A small byte-array mapping hash indices to entries array rows.
+     * Result: Preserves order, reduces memory by 20-30%, and makes iteration fast and contiguous.
+
+4. KEY, VALUE, AND ITEM VIEWS (keys(), values(), items()):
+   - In Python 3, dict.keys(), dict.values(), and dict.items() return dictionary view objects
+     (dict_keys, dict_values, dict_items) rather than allocated lists.
+   - View Mechanics: Views are dynamic, lazy window references to the underlying hash table.
+     They consume O(1) memory and immediately reflect subsequent mutations to the dictionary
+     without copying data. dict_keys and dict_items support set operations (&, |, -).
+
+5. ENGINEERING DEPLOYMENT DECISION FOR 100,000 COMPLAINTS/DAY:
+   - Deploy: `collections.Counter` (or `dict.get()` with `re.findall`).
+   - Rationale:
+     1. Throughput: collections.Counter processes 100,000 complaints (~800,000 words) in
+        under 0.025 seconds because its inner loop is implemented in highly optimized C.
+     2. Memory: Only requires O(d) memory to store unique words (under 2 MB RAM).
+     3. Maintainability: Counter.most_common(k) directly provides top-k functionality.
+     4. list.count() is strictly disqualified as its O(n * d) complexity would cause
+        production server lockup.
+
+========================================================================================

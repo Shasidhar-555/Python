@@ -1,0 +1,274 @@
+{
+  "12637": {
+    "name": "Pandian Superfast Express",
+    "route": [
+      [
+        "Chennai Egmore",
+        "Source",
+        "21:40"
+      ],
+      [
+        "Tambaram",
+        "22:08",
+        "22:10"
+      ],
+      [
+        "Chengalpattu",
+        "22:38",
+        "22:40"
+      ],
+      [
+        "Villupuram",
+        "00:05",
+        "00:10"
+      ],
+      [
+        "Tiruchchirappalli",
+        "02:45",
+        "02:50"
+      ],
+      [
+        "Dindigul",
+        "04:02",
+        "04:05"
+      ],
+      [
+        "Madurai Junction",
+        "05:35",
+        "Destination"
+      ]
+    ],
+    "days": [
+      "Wed",
+      "Fri",
+      "Tue",
+      "Thu",
+      "Mon",
+      "Sat",
+      "Sun"
+    ]
+  },
+  "12673": {
+    "name": "Cheran Superfast Express",
+    "route": [
+      [
+        "Chennai Central",
+        "Source",
+        "22:00"
+      ],
+      [
+        "Arakkonam",
+        "22:58",
+        "23:00"
+      ],
+      [
+        "Katpadi",
+        "23:48",
+        "23:50"
+      ],
+      [
+        "Jolarpettai",
+        "01:08",
+        "01:10"
+      ],
+      [
+        "Salem",
+        "02:47",
+        "02:50"
+      ],
+      [
+        "Erode",
+        "03:50",
+        "03:55"
+      ],
+      [
+        "Tiruppur",
+        "04:38",
+        "04:40"
+      ],
+      [
+        "Coimbatore Junction",
+        "06:00",
+        "Destination"
+      ]
+    ],
+    "days": [
+      "Wed",
+      "Fri",
+      "Tue",
+      "Thu",
+      "Mon",
+      "Sat",
+      "Sun"
+    ]
+  },
+  "20607": {
+    "name": "Vande Bharat Express (Mysuru)",
+    "route": [
+      [
+        "Chennai Central",
+        "Source",
+        "05:50"
+      ],
+      [
+        "Katpadi",
+        "07:13",
+        "07:15"
+      ],
+      [
+        "KSR Bengaluru",
+        "10:15",
+        "10:20"
+      ],
+      [
+        "Mysuru Junction",
+        "12:20",
+        "Destination"
+      ]
+    ],
+    "days": [
+      "Fri",
+      "Tue",
+      "Thu",
+      "Mon",
+      "Sat",
+      "Sun"
+    ]
+  },
+  "12635": {
+    "name": "Vaigai Superfast Express",
+    "route": [
+      [
+        "Chennai Egmore",
+        "Source",
+        "13:50"
+      ],
+      [
+        "Tambaram",
+        "14:18",
+        "14:20"
+      ],
+      [
+        "Chengalpattu",
+        "14:48",
+        "14:50"
+      ],
+      [
+        "Villupuram",
+        "16:00",
+        "16:05"
+      ],
+      [
+        "Vriddhachalam",
+        "16:45",
+        "16:47"
+      ],
+      [
+        "Tiruchchirappalli",
+        "18:50",
+        "18:55"
+      ],
+      [
+        "Dindigul",
+        "20:02",
+        "20:05"
+      ],
+      [
+        "Madurai Junction",
+        "21:30",
+        "Destination"
+      ]
+    ],
+    "days": [
+      "Wed",
+      "Fri",
+      "Tue",
+      "Thu",
+      "Mon",
+      "Sat",
+      "Sun"
+    ]
+  },
+  "12007": {
+    "name": "Shatabdi Express",
+    "route": [
+      [
+        "Chennai Central",
+        "Source",
+        "06:00"
+      ],
+      [
+        "Katpadi",
+        "07:48",
+        "07:50"
+      ],
+      [
+        "KSR Bengaluru",
+        "10:55",
+        "11:00"
+      ],
+      [
+        "Mysuru Junction",
+        "13:00",
+        "Destination"
+      ]
+    ],
+    "days": [
+      "Sat",
+      "Wed",
+      "Fri",
+      "Mon",
+      "Thu",
+      "Sun"
+    ]
+  },
+  "16127": {
+    "name": "Guruvayur Express",
+    "route": [
+      [
+        "Chennai Egmore",
+        "Source",
+        "09:45"
+      ],
+      [
+        "Tambaram",
+        "10:13",
+        "10:15"
+      ],
+      [
+        "Villupuram",
+        "12:15",
+        "12:20"
+      ],
+      [
+        "Tiruchchirappalli",
+        "15:05",
+        "15:10"
+      ],
+      [
+        "Madurai Junction",
+        "17:35",
+        "17:40"
+      ],
+      [
+        "Tirunelveli",
+        "20:25",
+        "20:30"
+      ],
+      [
+        "Guruvayur",
+        "06:40",
+        "Destination"
+      ]
+    ],
+    "days": [
+      "Wed",
+      "Fri",
+      "Tue",
+      "Thu",
+      "Mon",
+      "Sat",
+      "Sun"
+    ]
+  }
+}

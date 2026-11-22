@@ -1,0 +1,123 @@
+========================================================================================
+PART 1: 'COMPLETE THE CODE' - GRID DUPLICATION FIX & TUPLE KEYS
+========================================================================================
+bad : [[0, 7, 0, 0], [0, 7, 0, 0], [0, 7, 0, 0]]
+good: [[0, 7, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+True False
+T. Nagar
+
+[✓] Complete the Code passed all assertions matching expected assignment output.
+
+========================================================================================
+PART 2: HASHABILITY EXPERIMENT - LIST AS DICTIONARY KEY
+========================================================================================
+Attempting to insert key of type <class 'list'>: [13.0418, 80.2341] into a dictionary...
+CAUGHT EXPECTED ERROR: TypeError: cannot use 'list' as a dict key (unhashable type: 'list')
+
+EXPLANATION:
+1. Python dictionaries are implemented as open-address hash tables.
+2. A dictionary key must implement `__hash__()` and satisfy the invariant that
+   its hash value never changes throughout its lifetime.
+3. Lists are mutable (elements can be appended, removed, or reassigned in-place).
+   If a list could be hashed, mutating the list would change its hash value,
+   meaning the key would now be located in the wrong hash bucket, making lookup
+   impossible and corrupting hash table integrity.
+4. Therefore, lists deliberately set `__hash__ = None` in CPython, raising TypeError.
+5. Tuples containing only immutable elements are hashable and guarantee immutable integrity.
+
+========================================================================================
+PART 3: ALIASING, SHALLOW COPY, AND DEEP COPY IN BUS-STOP PASSENGER GRIDS
+========================================================================================
+1. Aliasing (aliased_grid = original_grid):
+   aliased_grid is original_grid : True
+   original_grid[0][0] modified  : 999 (Changed!)
+
+2. Shallow Copy (shallow_grid = copy.copy(original_grid)):
+   shallow_grid is original_grid         : False (Outer list is NEW)
+   shallow_grid[0] is original_grid[0]   : True (Inner row lists are SHARED!)
+   Appended row to shallow copy -> len(original): 2, len(shallow): 3
+   Modified nested element shallow_grid[0][1] = 777:
+   original_grid[0][1] is now            : 777 (Shared reference updated!)
+
+3. Deep Copy (deep_grid = copy.deepcopy(original_grid)):
+   deep_grid is original_grid           : False (Outer list is NEW)
+   deep_grid[0] is original_grid[0]     : False (Inner row lists are NEW!)
+   deep_grid[0][0] = 888 -> original_grid[0][0]: 15 (Completely Isolated!)
+
+========================================================================================
+PART 4: FUNCTION ARGUMENT MUTABILITY (PASS-BY-ASSIGNMENT)
+========================================================================================
+Caller's grid before function call: [[0, 0], [0, 0]] (id: 2431314948224)
+Caller's grid after function call : [[0, 5], [0, 0]] (id: 2431314948224)
+EXPLANATION:
+Python uses 'call-by-object-reference'. The parameter 'zone_counts' binds to the exact
+same list object in memory. In-place modifications (indexing, append) directly mutate
+the underlying object visible to the caller.
+
+========================================================================================
+PART 5: TUPLE UNPACKING IN CITY BUS NETWORK
+========================================================================================
+Bus Stop Name        | Latitude   | Longitude  | Zone (R,C)   | Routes
+------------------------------------------------------------------------
+Chennai Central      | 13.0827    | 80.2707    | (0, 1)       | 42    
+T. Nagar             | 13.0418    | 80.2341    | (1, 2)       | 65    
+Guindy Kathipara     | 12.9815    | 80.2180    | (2, 0)       | 58    
+Marina Beach         | 13.0594    | 80.2834    | (0, 3)       | 24    
+Saidapet             | 12.9915    | 80.2337    | (1, 1)       | 37    
+
+========================================================================================
+PART 6: MUTABLE LIST INSIDE AN IMMUTABLE TUPLE
+========================================================================================
+Original tuple: ('Chennai Central', [10, 20, 30]) (id: 2431311634368)
+Attempting `hybrid_tuple[1] = ...`: TypeError: 'tuple' object does not support item assignment
+After `hybrid_tuple[1].append(40)`: ('Chennai Central', [10, 20, 30, 40])
+Notice the tuple ID remains unchanged: 2431311634368
+Attempting `hash(hybrid_tuple)`: TypeError: unhashable type: 'list'
+EXPLANATION: A tuple's structure is fixed, but if it contains pointers to mutable
+objects, those inner objects can mutate in-place, which forfeits hashability.
+
+========================================================================================
+PART 7: EMPIRICAL BENCHMARK - TUPLE VS LIST (1,000,000 VALUES)
+========================================================================================
+Memory Allocation for 1,000,000 elements:
+• List  Size : 8,000,056 bytes (7.63 MB)
+• Tuple Size : 8,000,048 bytes (7.63 MB)
+• Memory Overhead Difference: 8 bytes saved by tuple (0.00% reduction)
+
+Timing Comparison:
+• List Creation Time  : 0.027940 s
+• Tuple Creation Time : 0.047549 s
+• List Lookup (5,000,000 reads) : 0.085695 s
+• Tuple Lookup (5,000,000 reads): 0.079790 s
+
+========================================================================================
+PART 8: ALTERNATIVE CONCEPT - SPARSE DICT GRID VS DENSE 2D LIST
+========================================================================================
+Grid Configuration: 1000 x 1000 = 1,000,000 total zones | Active Zones: 250
+• Dense List of Lists : Memory = 7875.84 KB | Build Time = 0.002331 s
+• Sparse Dict Grid    : Memory = 31.55 KB | Build Time = 0.000027 s
+• Memory Reduction Ratio: 249.7x less memory using sparse dictionary!
+
+Complexity Analysis:
+• Dense Matrix: Access time O(1) via dense_grid[r][c]. Space O(rows * cols).
+• Sparse Dict : Access time O(1) average via sparse_grid.get((r, c), 0). Space O(E) where E = active stops.
+
+========================================================================================
+CONCLUSION: WHEN TO USE TUPLE VS LIST & IMMUTABILITY PROTECTION
+========================================================================================
+
+1. WHEN TO USE A TUPLE:
+   - For heterogeneous fixed records (e.g. coordinates (lat, lon), database rows, RGB colors).
+   - Whenever an object must serve as a dictionary key or set element (demands hashability).
+   - When communicating data across functions that must NEVER be modified in-place by callers.
+   - For read-only data structures where memory efficiency and immutability guarantees matter.
+
+2. WHAT IMMUTABILITY PROTECTS YOU FROM:
+   - Accidental Side Effects: Prevents helper functions or background threads from silently
+     modifying shared state.
+   - Hash Table Invariant Corruption: Ensures dictionary and set keys maintain constant hash
+     values and bucket assignments throughout program execution.
+   - Aliasing Bugs: Eliminates bugs where two variables referencing the same sequence cause
+     unintended synchronized mutations (as demonstrated in the `[[0]*cols]*rows` bug).
+
+========================================================================================

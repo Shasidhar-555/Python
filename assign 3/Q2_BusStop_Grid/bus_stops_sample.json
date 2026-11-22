@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Chennai Central",
+    "lat": 13.0827,
+    "lon": 80.2707,
+    "zone": [
+      0,
+      1
+    ],
+    "daily_passengers": 14200
+  },
+  {
+    "name": "T. Nagar",
+    "lat": 13.0418,
+    "lon": 80.2341,
+    "zone": [
+      1,
+      2
+    ],
+    "daily_passengers": 21500
+  },
+  {
+    "name": "Guindy Kathipara",
+    "lat": 12.9815,
+    "lon": 80.218,
+    "zone": [
+      2,
+      0
+    ],
+    "daily_passengers": 18900
+  },
+  {
+    "name": "Marina Beach",
+    "lat": 13.0594,
+    "lon": 80.2834,
+    "zone": [
+      0,
+      3
+    ],
+    "daily_passengers": 8300
+  },
+  {
+    "name": "Saidapet",
+    "lat": 12.9915,
+    "lon": 80.2337,
+    "zone": [
+      1,
+      1
+    ],
+    "daily_passengers": 11400
+  }
+]
