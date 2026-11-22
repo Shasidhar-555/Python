@@ -1,0 +1,50 @@
+1|negative|Heavy black smoke is pouring from the chemical factory in Manali. The burning smell is unbearable and causing burning eyes.
+2|negative|Garbage burning near the Velachery railway station every night. The air is extremely bad and dirty.
+3|positive|The new electric buses on Mount Road are clean, quiet, and fast. Air quality in this corridor has visibly improved.
+4|negative|Construction dust on OMR is choking two-wheeler riders. No water sprinkling done by the contractor, very slow work.
+5|negative|Traffic police officers are inhaling toxic fumes at the busy Guindy junction. The pollution mask provided was broken and ineffective.
+6|positive|Tree plantation drive in Anna Nagar park has improved local ambient air. The morning atmosphere feels fresh and clean.
+7|negative|A diesel generator at the commercial complex is running non-stop with thick black exhaust. The soot is settling on our laundry.
+8|positive|The mobile app complaint resolution was fast and helpful. The patrol team stopped waste burning within two hours.
+9|negative|Severe suffocating smell from the Kodungaiyur dumping ground during night hours. Residents cannot open windows.
+10|negative|Old public transport buses emitting massive clouds of unburnt diesel soot. Inspection certificates must be fake.
+11|neutral|The ambient temperature today is 31 degrees with moderate humidity and overcast skies.
+12|negative|Stone crushing unit operating without dust suppression barriers in Tambaram. Everything is covered in grey powder.
+13|positive|Good initiative by the pollution control board to install real-time LED air quality display boards at Marina Beach.
+14|negative|Plastic waste openly incinerated behind the market complex. The smoke is toxic and hazardous to children in the nearby school.
+15|negative|Road sweeping trucks kicking up enormous dust plumes instead of vacuuming. The road is dirty and breathing is difficult.
+16|positive|Public cycle sharing stations in Besant Nagar are well maintained and helpful for short zero-emission commutes.
+17|negative|Asphalt mixing plant operating late at night near residential apartments. Thick fumes are suffocating senior citizens.
+18|neutral|Automated monitoring sensor installed on the rooftop of the zone office at 10 AM today.
+19|negative|Biomedical waste incinerator chimney releasing foul-smelling dark emissions during early morning hours.
+20|positive|Paved pedestrian footpaths in T. Nagar pedestrian plaza have reduced road dust resuspension. Very clean surroundings.
+21|negative|Open burning of fallen dry leaves along the highway berms. Air quality is bad and visibility dropped significantly.
+22|negative|Heavy container trucks idling engines for hours near the harbour gates. Exhaust fumes are thick and unbearable.
+23|positive|Prompt response from the ward health inspector. The illegal foundry was inspected and fined within 24 hours, very helpful.
+24|negative|Crematorium chimney scrubber appears broken. Black ash falling on nearby rooftops and clotheslines.
+25|negative|Sand lorries travelling without tarpaulin covers, spilling fine particulate dust across the entire bridge.
+26|neutral|Quarterly meteorological report published by the meteorological department for coastal Tamil Nadu.
+27|negative|Paint manufacturing unit venting volatile organic solvents into the atmosphere. The chemical smell makes residents nauseous.
+28|positive|Transition to CNG autorickshaws in the central business district has improved roadside breathing conditions. Very good change.
+29|negative|Unauthorized battery recycling workshop melting lead in open crucibles. Highly toxic fumes in a congested alley.
+30|negative|Unpaved service road near the flyover construction has cratered into moonscapes of dust. Traffic is slow and air is dirty.
+31|positive|Lake restoration project has cleared water hyacinth and planted native shrubs. Surroundings are clean and pleasant.
+32|negative|Thermal power plant fly ash dyke leakage blowing into nearby agricultural fields. The white ash is bad for crop health.
+33|negative|Poultry farm exhaust fans venting overwhelming ammonia odor directly towards the residential colony.
+34|neutral|Air quality monitoring station calibrated with span gas at 08:00 hours this morning.
+35|negative|Open tyre burning near mechanic sheds to extract scrap steel wire. Dense acrid smoke blanketing the entire lane.
+36|positive|Greening of traffic roundabouts with hedges has noticeably suppressed roadside particulate matter. Fast work by corporation.
+37|negative|Ready-mix concrete batching plant operating without cement silo dust filters. Fine powder drifting across the neighborhood.
+38|negative|Sewage treatment plant aerator breakdown causing foul hydrogen sulfide gas to spread across two kilometers.
+39|positive|Suburban electric train service punctuality improved, encouraging commuters to leave personal vehicles at home.
+40|negative|Textile dyeing unit discharging untreated steam and solvent vapor directly from roof vents at midnight.
+41|negative|Illegal demolition of multistory building without water misting cannons. Concrete dust storm blinding motorists.
+42|neutral|Station battery voltage logged at 12.8 volts under normal solar charging conditions.
+43|negative|Wood seasoning furnace burning chemical-treated timber scraps. The smoke is pungent and eyes water immediately.
+44|positive|Corporation nursery distributing free saplings to residents associations. Excellent and helpful civic initiative.
+45|negative|Garbage compactor vehicle leaking putrid leachate along the roadway and spreading noxious stench.
+46|negative|Foundry slag dumping on vacant public plots. High winds kick up mineral dust storms during afternoon hours.
+47|positive|Clean solar rooftop installation at the government hospital reduces local diesel generator reliance. Very good move.
+48|negative|Grain storage warehouse fumigation leaking phosphine gas odor into adjacent residential street. Residents feeling dizzy.
+49|negative|Heavy construction cranes and earthmovers stirring clouds of silt along the riverbank path. Air is suffocating.
+50|positive|Strict enforcement of no-idling regulations outside school zones has improved morning drop-off air quality. Fast and effective.
