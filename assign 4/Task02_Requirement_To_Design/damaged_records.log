@@ -1,0 +1,6 @@
+# BIOMETRIC SCANNER ANOMALY AUDIT LOG - TOTAL ANOMALIES: 3
+Filename                   | Line   | Reason                           | Raw Content
+------------------------------------------------------------------------------------------
+attendance_2026-10-03.txt  | 11     | Expected 3 fields, found 2       | 192511099,2026-10-03
+attendance_2026-10-03.txt  | 12     | Invalid status code 'LEAVE'      | 192511098,2026-10-03,LEAVE
+attendance_2026-10-03.txt  | 13     | Missing register number          | ,2026-10-03,P

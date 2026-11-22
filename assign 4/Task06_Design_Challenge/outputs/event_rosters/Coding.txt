@@ -1,0 +1,9 @@
+======================================================================
+CULTURAL FEST EVENT ROSTER: CODING
+Total Enrolled Participants: 3
+======================================================================
+Reg No        Student Name        Dept      Email                     
+----------------------------------------------------------------------
+192511402     Bala Vignesh        CSE       bala.vignesh@simats.edu   
+192511405     Esha Patel          ECE       esha.patel@simats.edu     
+192511413     Naveen Kumar        IT        naveen.k@simats.edu       

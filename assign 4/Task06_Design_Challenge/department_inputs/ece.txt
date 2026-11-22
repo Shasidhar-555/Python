@@ -1,0 +1,5 @@
+192511405,Esha Patel,ECE,esha.patel@simats.edu,Robotics;Coding
+192511406,Goutham Raj,ECE,goutham.raj@simats.edu,Music;Quiz
+192511402,Bala Vignesh,ECE,bala.v@simats.edu,Music
+192511407,Harini Nair,ECE,harini@simatsedu,Dance
+192511408,Imran Khan,ECE,imran.khan@simats.edu,Hackathon;Gaming

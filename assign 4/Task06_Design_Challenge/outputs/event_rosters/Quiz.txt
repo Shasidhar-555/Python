@@ -1,0 +1,9 @@
+======================================================================
+CULTURAL FEST EVENT ROSTER: QUIZ
+Total Enrolled Participants: 3
+======================================================================
+Reg No        Student Name        Dept      Email                     
+----------------------------------------------------------------------
+192511406     Goutham Raj         ECE       goutham.raj@simats.edu    
+192511414     Oviya S             IT        oviya.s@simats.edu        
+192511416     Qasim Ali           BIOTECH   qasim.ali@simats.edu      

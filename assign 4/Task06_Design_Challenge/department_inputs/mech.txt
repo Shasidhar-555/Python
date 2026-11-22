@@ -1,0 +1,4 @@
+192511409,Janani S,MECH,janani.s@simats.edu,Robotics;LatheWar
+192511410,Karthik M,MECH,,Gaming;Quiz
+192511411,Lavanya R,MECH,lavanya.r@simats.edu,Dance;Fashion
+192511412,Manoj Kumar,MECH,manoj kumar@simats.edu,Photography

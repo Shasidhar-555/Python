@@ -1,0 +1,8 @@
+192511001, Karthik Harish, 1850.50
+192511002, Ravi Kumar, 2100.00
+192511003, Priya S, 1950.25
+192511004, Damaged Student
+192511005, Corrupt Amount, Rs.3000
+192511006, Negative Bill, -500.00
+192511007, Divya Raman, 2450.75
+

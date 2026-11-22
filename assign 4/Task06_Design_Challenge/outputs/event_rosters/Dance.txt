@@ -1,0 +1,9 @@
+======================================================================
+CULTURAL FEST EVENT ROSTER: DANCE
+Total Enrolled Participants: 3
+======================================================================
+Reg No        Student Name        Dept      Email                     
+----------------------------------------------------------------------
+192511401     Aditi Sharma        CSE       aditi.sharma@simats.edu   
+192511411     Lavanya R           MECH      lavanya.r@simats.edu      
+192511417     Rithanya V          BIOTECH   rithanya.v@simats.edu     

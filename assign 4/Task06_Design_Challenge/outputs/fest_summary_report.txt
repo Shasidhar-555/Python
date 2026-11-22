@@ -1,0 +1,38 @@
+======================================================================
+SIMATS CULTURAL FEST REGISTRATION DESK - EXECUTIVE SUMMARY
+Generated on: 2026-11-19 04:15:46
+======================================================================
+
+1. REGISTRATION OVERVIEW:
+   - Total Unique Students Registered: 13
+   - Total Event Enrollments:          26
+   - Total Events Scheduled:           13
+   - Total Rejected Records/Lines:     10
+
+2. DEPARTMENT PARTICIPATION BREAKDOWN:
+   Department          Unique Students 
+   ------------------------------------
+   BIOTECH             3               
+   CSE                 2               
+   ECE                 3               
+   IT                  3               
+   MECH                2               
+
+3. EVENT ENROLLMENT BREAKDOWN:
+   Event Name               Participants    
+   -----------------------------------------
+   Coding                   3               
+   Dance                    3               
+   Debate                   1               
+   Drama                    1               
+   Fashion                  1               
+   Gaming                   2               
+   Hackathon                3               
+   LatheWar                 1               
+   Music                    4               
+   Photography              1               
+   Poster                   1               
+   Quiz                     3               
+   Robotics                 2               
+
+======================================================================

@@ -1,0 +1,4 @@
+192511416,Qasim Ali,BIOTECH,qasim.ali@simats.edu,Quiz;Poster
+192511417,Rithanya V,BIOTECH,rithanya.v@simats.edu,Dance;Music
+192511418,Sanjay Ram,BIOTECH,sanjay@@simats.edu,Debate
+192511419,Tarun Teja,BIOTECH,tarun.teja@simats.edu,Debate;Drama

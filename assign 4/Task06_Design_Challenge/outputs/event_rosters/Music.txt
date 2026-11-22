@@ -1,0 +1,10 @@
+======================================================================
+CULTURAL FEST EVENT ROSTER: MUSIC
+Total Enrolled Participants: 4
+======================================================================
+Reg No        Student Name        Dept      Email                     
+----------------------------------------------------------------------
+192511401     Aditi Sharma        CSE       aditi.sharma@simats.edu   
+192511406     Goutham Raj         ECE       goutham.raj@simats.edu    
+192511415     Praveen Raj         IT        praveen.raj@simats.edu    
+192511417     Rithanya V          BIOTECH   rithanya.v@simats.edu     

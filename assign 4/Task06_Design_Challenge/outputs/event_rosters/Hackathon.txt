@@ -1,0 +1,9 @@
+======================================================================
+CULTURAL FEST EVENT ROSTER: HACKATHON
+Total Enrolled Participants: 3
+======================================================================
+Reg No        Student Name        Dept      Email                     
+----------------------------------------------------------------------
+192511402     Bala Vignesh        CSE       bala.vignesh@simats.edu   
+192511408     Imran Khan          ECE       imran.khan@simats.edu     
+192511413     Naveen Kumar        IT        naveen.k@simats.edu       

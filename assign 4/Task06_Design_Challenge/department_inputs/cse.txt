@@ -1,0 +1,5 @@
+192511401,Aditi Sharma,CSE,aditi.sharma@simats.edu,Dance;Music
+192511402,Bala Vignesh,CSE,bala.vignesh@simats.edu,Coding;Hackathon
+192511401,Aditi Sharma,CSE,aditi.sharma@simats.edu,Quiz
+192511403,Chitra Ravi,CSE,chitra.ravisimats.edu,Drama;Dance
+192511404,Deepak Kumar,CSE

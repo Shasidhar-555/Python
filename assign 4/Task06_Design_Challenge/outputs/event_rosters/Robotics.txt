@@ -1,0 +1,8 @@
+======================================================================
+CULTURAL FEST EVENT ROSTER: ROBOTICS
+Total Enrolled Participants: 2
+======================================================================
+Reg No        Student Name        Dept      Email                     
+----------------------------------------------------------------------
+192511405     Esha Patel          ECE       esha.patel@simats.edu     
+192511409     Janani S            MECH      janani.s@simats.edu       

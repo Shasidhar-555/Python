@@ -1,0 +1,2 @@
+Fluent Python
+The Pragmatic Programmer

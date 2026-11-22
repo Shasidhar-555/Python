@@ -1,0 +1,24 @@
+================================================================================
+FEST REGISTRATION AUDIT & REJECTION LOG
+================================================================================
+Source File     Line  Error Type              Reason
+--------------------------------------------------------------------------------
+cse.txt         3     DuplicateRegistration   Register number '192511401' already registered in the fest
+   [Raw Content]: 192511401,Aditi Sharma,CSE,aditi.sharma@simats.edu
+cse.txt         4     ValidationError         Invalid email 'chitra.ravisimats.edu': Expected exactly one '@', found 0
+   [Raw Content]: 192511403,Chitra Ravi,CSE,chitra.ravisimats.edu,Drama;Dance
+cse.txt         5     ValidationError         Expected 5 fields, found 3 (raw: '192511404,Deepak Kumar,CSE')
+   [Raw Content]: 192511404,Deepak Kumar,CSE
+ece.txt         3     DuplicateRegistration   Register number '192511402' already registered in the fest
+   [Raw Content]: 192511402,Bala Vignesh,ECE,bala.v@simats.edu
+ece.txt         4     ValidationError         Invalid email 'harini@simatsedu': Domain part must contain at least one dot
+   [Raw Content]: 192511407,Harini Nair,ECE,harini@simatsedu,Dance
+mech.txt        2     ValidationError         Invalid email '': Email address is empty
+   [Raw Content]: 192511410,Karthik M,MECH,,Gaming;Quiz
+mech.txt        4     ValidationError         Invalid email 'manoj kumar@simats.edu': Email contains whitespace
+   [Raw Content]: 192511412,Manoj Kumar,MECH,manoj kumar@simats.edu,Photography
+it.txt          4     ValidationError         Expected 5 fields, found 1 (raw: 'CORRUPTED_LINE_BYTE_BUFFER_NULL_PAYLOAD')
+   [Raw Content]: CORRUPTED_LINE_BYTE_BUFFER_NULL_PAYLOAD
+biotech.txt     3     ValidationError         Invalid email 'sanjay@@simats.edu': Expected exactly one '@', found 2
+   [Raw Content]: 192511418,Sanjay Ram,BIOTECH,sanjay@@simats.edu,Debate
+civil.txt       0     FileNotFoundError       Department file missing from storage: 'C:\Users\karthik harish\.gemini\antigravity\scratch\CSA08-192511328-Assignment4\Task06_Design_Challenge\department_inputs\civil.txt'

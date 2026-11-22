@@ -1,0 +1,8 @@
+======================================================================
+CULTURAL FEST EVENT ROSTER: GAMING
+Total Enrolled Participants: 2
+======================================================================
+Reg No        Student Name        Dept      Email                     
+----------------------------------------------------------------------
+192511408     Imran Khan          ECE       imran.khan@simats.edu     
+192511415     Praveen Raj         IT        praveen.raj@simats.edu    
